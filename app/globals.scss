@@ -1,0 +1,730 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@600&family=Roboto&display=swap");
+
+// background
+$white: #ffffff;
+$purple: #5e3db3;
+$gray: #f5f4f9;
+$dark-blue: #090c35;
+
+// font color
+$font-gray1: #e7e7e7;
+$font-gray2: #c2c2c2;
+$font-black: #000000;
+$font-white: #ffffff;
+
+// font-size
+$font-90: 90px;
+$font-50: 50px;
+$font-36: 36px;
+$font-32: 32px;
+$font-28: 28px;
+$font-20: 20px;
+$font-18: 18px;
+$font-15: 15px;
+$font-14: 14px;
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.athlets {
+  display: grid;
+  overflow: hidden;
+
+  &__image {
+    background-image: url("/images/footballer3.png");
+    left: 52px;
+    top: 70px;
+    width: 218px;
+    height: 281px;
+    position: absolute;
+    z-index: 9999;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__first {
+    display: flex;
+    background-color: $white;
+  }
+
+  &__second {
+    display: flex;
+    background-color: $gray;
+  }
+
+  &__third {
+    display: flex;
+    background-color: $purple;
+  }
+
+  &__container {
+    display: grid;
+  }
+
+  &__group {
+    padding-right: 0px;
+  }
+}
+
+.player {
+  display: grid;
+  position: relative;
+  overflow: hidden;
+
+  &__image {
+    background-image: url("/images/player3.png");
+    left: 3px;
+    top: 100px;
+    width: 302px;
+    height: 250px;
+    position: absolute;
+    z-index: 999;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__first {
+    display: flex;
+    background-color: $white;
+    justify-content: flex-start;
+
+    .text__detail--black {
+      letter-spacing: 0;
+    }
+  }
+
+  &__second {
+    display: flex;
+    background-color: $gray;
+    justify-content: flex-start;
+
+    .text__detail--black {
+      letter-spacing: 0.65px;
+    }
+  }
+
+  &__third {
+    display: flex;
+    background-color: $dark-blue;
+    justify-content: flex-start;
+  }
+
+  &__container {
+    display: grid;
+    width: 50%;
+  }
+
+  &__group {
+    padding-left: 321px;
+  }
+}
+
+.subtitle_group {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.text__title {
+  font-size: $font-90;
+  color: $font-gray1;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 105px;
+}
+
+.text__subtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: $font-36;
+  color: $font-gray2;
+  line-height: 42px;
+  letter-spacing: 1.5px;
+}
+
+.text__detail--black {
+  font-size: $font-20;
+  color: $font-black;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.93px;
+}
+
+.text__detail--white {
+  font-size: $font-20;
+  color: $font-white;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.93px;
+}
+
+.text__number--default {
+  font-style: normal;
+  color: $font-black;
+  font-weight: 400;
+  font-size: $font-20;
+  line-height: 21px;
+  letter-spacing: 1.5px;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 5px;
+    border-radius: 3px;
+    background-color: $purple;
+    margin-top: 4px;
+  }
+}
+
+.text__number--white {
+  font-style: normal;
+  color: $font-black;
+  font-weight: 400;
+  font-size: $font-18;
+  line-height: 21px;
+  letter-spacing: 1.5px;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 5px;
+    border-radius: 3px;
+    background-color: $white;
+    margin-top: 4px;
+  }
+}
+
+.text__number--whitepurple {
+  font-style: normal;
+  color: $purple;
+  font-weight: 400;
+  font-size: $font-18;
+  line-height: 21px;
+  letter-spacing: 1.5px;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 5px;
+    border-radius: 3px;
+    background-color: $white;
+    margin-top: 4px;
+  }
+}
+
+.slide {
+  background-color: $gray;
+  width: 100vw;
+  height: 284px;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 72px 6px 19px 19px;
+
+    .text__subtitle {
+      font-size: $font-28;
+      line-height: 33px;
+      letter-spacing: 1.5px;
+    }
+
+    .text__number--default {
+      font-size: $font-14;
+      &::after {
+        height: 4px;
+        margin-top: 0px;
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    column-gap: 9px;
+  }
+
+  &__detail {
+    font-style: normal;
+    font-weight: 400;
+    font-size: $font-15;
+    line-height: 18px;
+    letter-spacing: 0.74px;
+  }
+
+  .slick-dots li button:before {
+    font-size: 10px;
+  }
+
+  .slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #5c3caf;
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 140px) {
+  .athlets {
+    &__image {
+      background-image: url("/images/footballer3.png");
+      left: 52px;
+      top: 70px;
+      width: 218px;
+      height: 281px;
+    }
+
+    &__container {
+      width: 100%;
+    }
+
+    &__group {
+      padding: 0px;
+    }
+
+    .text__title {
+      font-size: 50px;
+      line-height: 59px;
+      padding: 0px 0px 237px 19px;
+    }
+
+    .subtitle_group {
+      display: none;
+    }
+
+    .text__detail--black {
+      display: none;
+    }
+
+    &__second {
+      display: none;
+    }
+
+    &__third {
+      display: none;
+    }
+  }
+
+  .player {
+    &__image {
+      background-image: url("/images/player3.png");
+      left: 3px;
+      top: 100px;
+      width: 302px;
+      height: 250px;
+    }
+
+    &__container {
+      width: 100%;
+    }
+
+    &__group {
+      padding: 19px 0px 0px 17px;
+    }
+
+    .text__title {
+      font-size: 50px;
+      line-height: 59px;
+      padding: 0px 0px 237px 19px;
+    }
+
+    .subtitle_group {
+      display: none;
+    }
+
+    .text__detail--black {
+      display: none;
+    }
+
+    &__second {
+      display: none;
+    }
+
+    &__third {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 461px) {
+  .athlets {
+    &__image {
+      background-image: url("/images/footballer3.png");
+      left: 35%;
+    }
+  }
+
+  .player {
+    &__image {
+      background-image: url("/images/player3.png");
+      left: 22%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slide {
+    display: none;
+  }
+
+  .athlets {
+    &__image {
+      background-image: url("/images/footballer2.png");
+      left: -161px;
+      top: 102px;
+      width: 498px;
+      height: 718px;
+    }
+
+    &__container {
+      width: 100%;
+    }
+
+    &__group {
+      padding-left: 291px;
+      padding-right: 0px;
+    }
+
+    &__first {
+      display: block;
+
+      .text__title {
+        font-size: $font-90;
+        padding: 81px 0px 0px 0px;
+        line-height: 105px;
+      }
+
+      .subtitle_group {
+        padding-top: 21px;
+      }
+
+      .text__detail--black {
+        letter-spacing: 0px;
+        padding-right: 20px;
+      }
+    }
+
+    &__second {
+      display: block;
+
+      .text__detail--black {
+        display: block;
+        letter-spacing: 0.837px;
+        padding-right: 20px;
+      }
+    }
+
+    &__third {
+      display: block;
+
+      .text__detail--white {
+        padding-right: 20px;
+      }
+    }
+
+    .subtitle_group {
+      display: flex;
+      padding-top: 30px;
+    }
+
+    .text__detail--black {
+      display: block;
+      padding-top: 21px;
+      padding-bottom: 30px;
+      font-size: $font-18;
+    }
+
+    .text__detail--white {
+      display: block;
+      padding-top: 21px;
+      padding-bottom: 30px;
+    }
+  }
+
+  .player {
+    &__image {
+      background-image: url("/images/player2.png");
+      width: 691px;
+      height: 568px;
+      left: 331px;
+      top: 32px;
+    }
+
+    &__container {
+      width: 100%;
+    }
+
+    &__group {
+      padding: 0px 291px 10px 33px;
+    }
+
+    &__first {
+      .text__title {
+        font-size: $font-90;
+        padding: 51px 0px 0px 0px;
+        line-height: 105px;
+      }
+
+      .subtitle_group {
+        display: flex;
+        padding-top: 34px;
+      }
+
+      .text__detail--black {
+        display: block;
+        padding-top: 21px;
+        padding-bottom: 10px;
+        font-size: $font-18;
+      }
+    }
+
+    &__second {
+      display: block;
+
+      .subtitle_group {
+        display: flex;
+        padding-top: 51px;
+      }
+
+      .text__detail--black {
+        display: block;
+        padding-top: 21px;
+        padding-bottom: 65px;
+        font-size: $font-18;
+      }
+    }
+
+    &__third {
+      display: block;
+
+      .subtitle_group {
+        display: flex;
+        padding-top: 44px;
+      }
+
+      .text__detail--white {
+        padding-bottom: 44px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .player {
+    &__image {
+      left: 45%;
+    }
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .player {
+    &__image {
+      left: 55%;
+    }
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .athlets {
+    display: grid;
+    overflow: hidden;
+
+    &__image {
+      background-image: url("/images/footballer.png");
+      top: 35px;
+      left: 175px;
+      width: 478px;
+      height: 750px;
+    }
+
+    &__container {
+      display: grid;
+      width: 50%;
+    }
+
+    &__first {
+      display: flex;
+      justify-content: flex-end;
+
+      .text__title {
+        padding: 24px 0 0 0;
+      }
+
+      .subtitle_group {
+        padding-top: 59px;
+      }
+
+      .text__detail--black {
+        padding: 31px 0 56px 0;
+      }
+    }
+
+    &__second {
+      display: flex;
+      justify-content: flex-end;
+
+      .subtitle_group {
+        padding-top: 53px;
+      }
+
+      .text__detail--black {
+        padding: 21px 0 56px 0;
+        font-size: $font-20;
+        line-height: 28px;
+        letter-spacing: 0.93px;
+      }
+    }
+
+    &__third {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__group {
+      padding-left: 0px;
+      padding-right: 186px;
+    }
+  }
+
+  .player {
+    &__image {
+      background-image: url("/images/player.png");
+      left: 45%;
+    }
+
+    &__group {
+      padding: 0px 584px 10px 186px;
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .player {
+    &__image {
+      background-image: url("/images/player.png");
+      left: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .athlets {
+    display: grid;
+    overflow: hidden;
+
+    &__image {
+      background-image: url("/images/footballer.png");
+      width: 678px;
+      height: 950px;
+    }
+
+    &__third {
+      display: flex;
+      background-color: $purple;
+      justify-content: flex-end;
+
+      .subtitle_group {
+        padding-top: 85px;
+      }
+
+      .text__detail--white {
+        padding: 21px 0 98px 0;
+        font-size: $font-20;
+        line-height: 28px;
+        letter-spacing: 0.93px;
+      }
+    }
+
+    &__group {
+      padding-left: 0px;
+      padding-right: 296px;
+    }
+  }
+
+  .player {
+    display: grid;
+    position: relative;
+    overflow: hidden;
+
+    &__image {
+      background-image: url("/images/player.png");
+      position: absolute;
+      left: 804px;
+      top: 0px;
+      width: 991px;
+      height: 815px;
+    }
+
+    &__group {
+      padding: 0px 0px 0px 321px;
+    }
+
+    &__first {
+      display: flex;
+      background-color: $white;
+      justify-content: flex-start;
+
+      .text__title {
+        padding-top: 124px;
+      }
+
+      .subtitle_group {
+        padding-top: 68px;
+      }
+
+      .text__detail--black {
+        font-size: $font-20;
+        line-height: 28px;
+        letter-spacing: 0;
+        padding: 21px 70px 69px 0px;
+      }
+    }
+
+    &__second {
+      display: flex;
+      background-color: $gray;
+      justify-content: flex-start;
+
+      .subtitle_group {
+        padding-top: 52px;
+      }
+
+      .text__detail--black {
+        letter-spacing: 0.65px;
+        padding-top: 21px;
+        padding-bottom: 102px;
+        font-size: $font-20;
+        line-height: 28px;
+      }
+    }
+
+    &__third {
+      display: flex;
+      background-color: $dark-blue;
+      justify-content: flex-start;
+
+      .subtitle_group {
+        padding-top: 87px;
+      }
+
+      .text__detail--white {
+        padding-top: 21px;
+        padding-bottom: 95px;
+        font-size: $font-20;
+        line-height: 28px;
+      }
+    }
+
+    &__container {
+      display: grid;
+      width: 50%;
+    }
+  }
+}
