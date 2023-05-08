@@ -461,7 +461,7 @@ body {
     }
 
     &__group {
-      padding: 0px 291px 10px 33px;
+      padding: 0px 291px 0px 33px;
     }
 
     &__first {
@@ -509,6 +509,7 @@ body {
       }
 
       .text__detail--white {
+        padding-top: 21px;
         padding-bottom: 44px;
       }
     }
